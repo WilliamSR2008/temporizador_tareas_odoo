@@ -1,3 +1,4 @@
+
 <odoo>
     <record id="vista_formulario_tarea_temporizador" model="ir.ui.view">
         <field name="name">tarea.proyecto.formulario.temporizador</field>
@@ -5,7 +6,6 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
 
-            <!-- Botones para iniciar y detener temporizador -->
             <xpath expr="//form//sheet//group" position="after">
                 <field name="temporizador_activo" invisible="1"/>
                 
@@ -18,8 +18,6 @@
                         attrs="{'invisible': [('temporizador_activo', '=', False)]}"/>
             </xpath>
 
-
-            <!-- Página de pestaña para ver temporizadores -->
             <xpath expr="//notebook" position="inside">
                 <page string="Temporizadores">
                     <field name="temporizadores_ids">
